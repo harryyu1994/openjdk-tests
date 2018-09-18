@@ -17,6 +17,8 @@ else
   MAKE=make
 fi
 
+/home/j9build/workspace/Grinder/openjdkbinary/j2sdk-image/jre//bin/java -XX:JITaaSServer -Xjit:verbose={jitaas} &
+
 if [ "$#" -eq 1 ];then
 	cd $1/TestConfig
 	$MAKE -f run_configure.mk
